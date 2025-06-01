@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Material from './containers/Material';
+// import Material from './containers/Material';
 // import Card from './containers/Card';
 // import Card from './containers/CardFun';
 // import Clock from './containers/ClockFun';
@@ -12,14 +12,20 @@ import Material from './containers/Material';
 // import Counter from './containers/counter';
 // import CounterFun from './containers/counterFun';
 // import CountryFun from './containers/countryFun';
-// import Clock from './containers/clock';n
+// import Clock from './containers/clock';
 // import AllInputValid from './containers/AllInputValid'
-import FormValidation from './containers/FormValidation'
+// import FormValidation from './containers/FormValidation'
+import { Provider } from 'react-redux';
+// import Counter from './containers/UI/counter/Counter';
+import { configureStore } from './redux/store';
+// import Pdf from './containers/pdf';
 
 function App() {
+  const store = configureStore();
   return (
-    <div className='container'>
-      <FormValidation />
+    <Provider store={store}>
+      {/* <Counter/> */}
+      {/* <FormValidation /> */}
       {/* <Students /> */}
       {/* <StudentFun /> */}
       {/* <Employee /> */}
@@ -34,7 +40,7 @@ function App() {
       {/* <Card /> */}
       {/* <AllInputValid /> */}
       {/* <Material /> */}
-    </div>
+    </Provider>
   );
 }
 export default App;
